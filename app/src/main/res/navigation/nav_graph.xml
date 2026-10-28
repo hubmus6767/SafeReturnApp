@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/navigatorFragment">
+
+    <fragment
+        android:id="@+id/navigatorFragment"
+        android:name="com.example.safereturn.NavigatorFragment"
+        android:label="Ekran Główny" />
+
+    <fragment
+        android:id="@+id/pointsListFragment"
+        android:name="com.example.safereturn.PointsListFragment"
+        android:label="Lista Punktów" />
+
+    <fragment
+        android:id="@+id/addPointFragment"
+        android:name="com.example.safereturn.AddPointFragment"
+        android:label="Dodaj Punkt" />
+</navigation>
