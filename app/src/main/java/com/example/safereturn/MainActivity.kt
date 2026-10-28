@@ -11,15 +11,15 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        // 1. Znajdź dolne menu
+
         val bottomNavigationView = findViewById<BottomNavigationView>(R.id.bottom_navigation)
 
-        // 2. Bezpieczne pobranie NavController z FragmentContainerView za pomocą FragmentManagera
+
         val navHostFragment = supportFragmentManager
             .findFragmentById(R.id.nav_host_fragment) as NavHostFragment
         val navController = navHostFragment.navController
 
-        // 3. Połączenie nawigacji z dolnym panelem
+
         bottomNavigationView.setupWithNavController(navController)
     }
 }
