@@ -2,7 +2,7 @@ package com.example.safereturn
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import androidx.navigation.findNavController
+import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.setupWithNavController
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
@@ -11,10 +11,15 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        // Podpięcie dolnego menu pod Kontroller Nawigacji
+        // 1. Znajdź dolne menu
         val bottomNavigationView = findViewById<BottomNavigationView>(R.id.bottom_navigation)
-        val navController = findNavController(R.id.nav_host_fragment)
 
+        // 2. Bezpieczne pobranie NavController z FragmentContainerView za pomocą FragmentManagera
+        val navHostFragment = supportFragmentManager
+            .findFragmentById(R.id.nav_host_fragment) as NavHostFragment
+        val navController = navHostFragment.navController
+
+        // 3. Połączenie nawigacji z dolnym panelem
         bottomNavigationView.setupWithNavController(navController)
     }
 }
