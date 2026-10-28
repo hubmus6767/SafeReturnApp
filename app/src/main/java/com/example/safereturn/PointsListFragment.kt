@@ -1,4 +1,4 @@
-package com.example.safereturn.ui
+package com.example.safereturn
 
 import android.os.Bundle
 import android.view.View
