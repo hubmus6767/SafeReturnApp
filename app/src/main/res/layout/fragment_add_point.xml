@@ -6,7 +6,7 @@
     android:orientation="vertical"
     android:padding="20dp">
 
-    <!-- Pasek statusu systemowego w aplikacji -->
+    <!-- gorny pasek w zakladce -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -33,7 +33,7 @@
             android:textSize="12sp" />
     </LinearLayout>
 
-    <!-- Karta aktywnego celu nawigacji -->
+    <!-- cel nawigacji -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -68,7 +68,7 @@
             android:textSize="13sp" />
     </LinearLayout>
 
-    <!-- Główna sekcja wizualna kompasu i strzałki -->
+    <!-- sekcja kompasu -->
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
@@ -108,7 +108,7 @@
         </LinearLayout>
     </FrameLayout>
 
-    <!-- Przyciski akcji na ekranie głównym -->
+    <!-- sekcja przyciskow -->
     <Button
         android:layout_width="match_parent"
         android:layout_height="50dp"
