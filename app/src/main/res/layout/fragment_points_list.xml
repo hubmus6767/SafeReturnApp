@@ -86,4 +86,53 @@
             android:textColor="@color/text_muted"
             android:textSize="12sp" />
     </LinearLayout>
+
+    <!-- punkty prywatne -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:text="SEJF LOKALIZACJI (WYMAGA AUTORYZACJI)"
+        android:textColor="@color/forest_primary"
+        android:textSize="11sp"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/card_bg"
+        android:elevation="1dp"
+        android:orientation="horizontal"
+        android:padding="14dp">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="🔒 Ukryty Skarb / Punkt Awaryjny"
+                android:textColor="@color/forest_primary"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:text="Zabezpieczone czytnikiem linii papilarnych"
+                android:textColor="@color/text_muted"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:backgroundTint="@color/forest_primary"
+            android:text="Odblokuj"
+            android:textSize="11sp" />
+    </LinearLayout>
 </LinearLayout>
