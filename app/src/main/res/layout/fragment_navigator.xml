@@ -2,12 +2,69 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:gravity="center"
-    android:orientation="vertical">
-    <TextView
-        android:layout_width="wrap_content"
+    android:background="@color/bg_light"
+    android:orientation="vertical"
+    android:padding="20dp">
+
+    <!-- gorny pasek w zakladce -->
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Ekran Główny: Nawigator i Mapa"
-        android:textSize="18sp"
-        android:textStyle="bold"/>
+        android:layout_marginBottom="12dp"
+        android:background="@color/card_bg"
+        android:elevation="1dp"
+        android:orientation="horizontal"
+        android:padding="12dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="🟢 GPS: Stabilny • Cloud: Online"
+            android:textColor="@color/forest_primary"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Bateria: 85%"
+            android:textColor="@color/text_muted"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+    <!-- cel nawigacji -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/card_bg"
+        android:elevation="2dp"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="AKTYWNY CEL (LINIA PROSTA)"
+            android:textColor="@color/forest_accent"
+            android:textSize="11sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="BAZA: Samochód (Leśny Parking)"
+            android:textColor="@color/text_main"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="Odległość: 850 metrów • Azymut: 142°"
+            android:textColor="@color/text_muted"
+            android:textSize="13sp" />
+    </LinearLayout>
 </LinearLayout>
