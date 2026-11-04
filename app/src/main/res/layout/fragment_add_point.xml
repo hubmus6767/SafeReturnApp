@@ -62,7 +62,7 @@
         android:padding="12dp"
         android:textSize="13sp" />
 
-    <!-- przelacznik do ustwwienia punktu na prywatny lub publiczny  -->
+    <!-- przelacznik do ustawienia punktu na prywatny lub publiczny  -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
