@@ -6,46 +6,29 @@
     android:orientation="vertical"
     android:padding="20dp">
 
-    <!-- gorny pasek w zakladce -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:text="Dodaj Nowy Punkt Terenowy"
+        android:textColor="@color/text_main"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <!-- aktuana pozycja z GPS -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="12dp"
+        android:layout_marginBottom="16dp"
         android:background="@color/card_bg"
         android:elevation="1dp"
-        android:orientation="horizontal"
+        android:orientation="vertical"
         android:padding="12dp">
 
         <TextView
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="🟢 GPS: Stabilny • Cloud: Online"
-            android:textColor="@color/forest_primary"
-            android:textSize="12sp"
-            android:textStyle="bold" />
-
-        <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Bateria: 85%"
-            android:textColor="@color/text_muted"
-            android:textSize="12sp" />
-    </LinearLayout>
-
-    <!-- cel nawigacji -->
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/card_bg"
-        android:elevation="2dp"
-        android:orientation="vertical"
-        android:padding="16dp">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="AKTYWNY CEL (LINIA PROSTA)"
+            android:text="POBRANE WSPÓŁRZĘDNE GPS"
             android:textColor="@color/forest_accent"
             android:textSize="11sp"
             android:textStyle="bold" />
@@ -53,48 +36,53 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="4dp"
-            android:text="BAZA: Samochód (Leśny Parking)"
+            android:layout_marginTop="2dp"
+            android:text="Szerokość: 49.621435 N\nDługość: 20.704210 E"
             android:textColor="@color/text_main"
-            android:textSize="18sp"
-            android:textStyle="bold" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="4dp"
-            android:text="Odległość: 850 metrów • Azymut: 142°"
-            android:textColor="@color/text_muted"
             android:textSize="13sp" />
     </LinearLayout>
 
-    <!-- sekcja kompasu -->
-    <FrameLayout
+    <!-- formularz -->
+    <EditText
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        android:layout_marginVertical="16dp"
+        android:layout_height="48dp"
+        android:layout_marginBottom="12dp"
         android:background="@color/card_bg"
-        android:elevation="1dp">
+        android:hint=" Nazwa punktu (np. Źródełko w lesie)"
+        android:paddingHorizontal="12dp"
+        android:textSize="13sp" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:layout_marginBottom="16dp"
+        android:background="@color/card_bg"
+        android:gravity="top|start"
+        android:hint=" Opis / Notatka terenowa (opcjonalnie)"
+        android:padding="12dp"
+        android:textSize="13sp" />
+
+    <!-- przelacznik do ustwwienia punktu na prywatny lub publiczny  -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        android:background="@color/card_bg"
+        android:elevation="1dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="14dp">
 
         <LinearLayout
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:gravity="center"
+            android:layout_weight="1"
             android:orientation="vertical">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="🧭"
-                android:textSize="48sp" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:text="Dynamiczna Strzałka Kierunku"
+                android:text="Zabezpiecz Sejfem Biometrycznym"
                 android:textColor="@color/text_main"
                 android:textSize="14sp"
                 android:textStyle="bold" />
@@ -102,29 +90,26 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="(Korekta pochylenia aktywna)"
+                android:text="Wymagaj odcisku palca przy odczycie"
                 android:textColor="@color/text_muted"
-                android:textSize="12sp" />
+                android:textSize="11sp" />
         </LinearLayout>
-    </FrameLayout>
 
-    <!-- sekcja przyciskow -->
+        <Switch
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minWidth="48dp"
+            android:minHeight="48dp"/>
+    </LinearLayout>
+
+    <!-- przycisk zapisu w bazie -->
     <Button
         android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:layout_marginBottom="8dp"
+        android:layout_height="54dp"
         android:backgroundTint="@color/forest_primary"
-        android:text="ZAPISZ OBECNĄ POZYCJĘ JAKO BAZĘ"
+        android:text="ZAPISZ W CHMURZE FIREBASE"
         android:textColor="@android:color/white"
         android:textSize="13sp"
         android:textStyle="bold" />
-
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="48dp"
-        android:backgroundTint="@color/forest_accent"
-        android:text="Wybierz inny cel z bazy"
-        android:textColor="@android:color/white"
-        android:textSize="13sp" />
 
 </LinearLayout>
