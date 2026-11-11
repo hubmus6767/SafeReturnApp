@@ -17,7 +17,14 @@
         android:orientation="horizontal"
         android:padding="12dp">
 
-
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="🟢 GPS: Stabilny • Cloud: Online"
+            android:textColor="@color/forest_primary"
+            android:textSize="12sp"
+            android:textStyle="bold" />
 
         <Button
             android:id="@+id/btnLogout"
