@@ -55,7 +55,18 @@
         android:textColorHint="#666666"
         android:textSize="13sp" />
 
-
+    <EditText
+        android:id="@+id/etPointDesc"
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:layout_marginBottom="16dp"
+        android:background="@color/card_bg"
+        android:gravity="top|start"
+        android:hint=" Opis / Notatka terenowa (opcjonalnie)"
+        android:padding="12dp"
+        android:textColor="@color/text_main"
+        android:textColorHint="#666666"
+        android:textSize="13sp" />
 
     <!-- przelacznik do ustawienia punktu na prywatny lub publiczny  -->
     <LinearLayout
