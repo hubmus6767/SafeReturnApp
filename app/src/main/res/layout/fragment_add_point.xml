@@ -44,23 +44,18 @@
 
     <!-- formularz -->
     <EditText
+        android:id="@+id/etPointName"
         android:layout_width="match_parent"
         android:layout_height="48dp"
         android:layout_marginBottom="12dp"
         android:background="@color/card_bg"
         android:hint=" Nazwa punktu (np. Źródełko w lesie)"
         android:paddingHorizontal="12dp"
+        android:textColor="@color/text_main"
+        android:textColorHint="#666666"
         android:textSize="13sp" />
 
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="90dp"
-        android:layout_marginBottom="16dp"
-        android:background="@color/card_bg"
-        android:gravity="top|start"
-        android:hint=" Opis / Notatka terenowa (opcjonalnie)"
-        android:padding="12dp"
-        android:textSize="13sp" />
+
 
     <!-- przelacznik do ustawienia punktu na prywatny lub publiczny  -->
     <LinearLayout
@@ -96,6 +91,7 @@
         </LinearLayout>
 
         <Switch
+            android:id="@+id/switchPrivate"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:minWidth="48dp"
@@ -104,6 +100,7 @@
 
     <!-- przycisk zapisu w bazie -->
     <Button
+        android:id="@+id/btnSavePoint"
         android:layout_width="match_parent"
         android:layout_height="54dp"
         android:backgroundTint="@color/forest_primary"
