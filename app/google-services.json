@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "958605887808",
+    "project_id": "safereturn-67fa5",
+    "storage_bucket": "safereturn-67fa5.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:958605887808:android:eb1daad81e9eb3897c12a5",
+        "android_client_info": {
+          "package_name": "com.example.safereturn"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCnHl2hRA-12QswfoPTnG8y55PRW0TxJVQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
