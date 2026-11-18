@@ -6,18 +6,16 @@
     android:gravity="center"
     android:orientation="vertical"
     android:padding="24dp">
-
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="32dp"
-        android:text="SafeReturn -- Rejestracja"
+        android:text="SafeReturn — Rejestracja"
         android:textColor="@color/forest_primary"
         android:textSize="22sp"
         android:textStyle="bold" />
-
     <EditText
-        android:id="@+id/etRegEmail"
+        android:id="@+id/etEmail"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_marginBottom="12dp"
@@ -28,37 +26,24 @@
         android:textColor="@color/text_main"
         android:textColorHint="#666666"
         android:textSize="14sp" />
-
     <EditText
-        android:id="@+id/etRegPassword"
+        android:id="@+id/etPassword"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:layout_marginBottom="24dp"
+        android:layout_marginBottom="20dp"
         android:background="@color/card_bg"
-        android:hint=" Hasło (min. 6 znaków)"
+        android:hint=" Hasło"
         android:inputType="textPassword"
         android:paddingHorizontal="12dp"
         android:textColor="@color/text_main"
         android:textColorHint="#666666"
         android:textSize="14sp" />
-
     <Button
-        android:id="@+id/btnRegisterUser"
+        android:id="@+id/btnRegister"
         android:layout_width="match_parent"
-        android:layout_height="54dp"
-        android:layout_marginBottom="12dp"
+        android:layout_height="50dp"
         android:backgroundTint="@color/forest_primary"
-        android:text="UTWÓRZ KONTO"
+        android:text="ZAREJESTRUJ I DODAJ ODCISK PALCA"
         android:textColor="@android:color/white"
         android:textStyle="bold" />
-
-    <Button
-        android:id="@+id/btnBackToLogin"
-        android:layout_width="match_parent"
-        android:layout_height="54dp"
-        android:backgroundTint="@color/forest_accent"
-        android:text="POWRÓT DO LOGOWANIA"
-        android:textColor="@android:color/white"
-        android:textStyle="bold" />
-
 </LinearLayout>
