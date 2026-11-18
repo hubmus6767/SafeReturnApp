@@ -1,138 +1,56 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/bg_light"
-    android:orientation="vertical"
     android:padding="16dp">
 
-    <!-- wyszukiwarka -->
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="12dp"
-        android:text="Baza Miejsc i Sejf Lokalizacji"
-        android:textColor="@color/text_main"
-        android:textSize="20sp"
-        android:textStyle="bold" />
-
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="48dp"
-        android:layout_marginBottom="16dp"
-        android:background="@color/card_bg"
-        android:hint=" 🔍 Szukaj w zapisanych punktach..."
-        android:paddingHorizontal="12dp"
-        android:textSize="13sp" />
-
-    <!-- punkty publiczne -->
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:text="PUNKTY PUBLICZNE I BAZY"
-        android:textColor="@color/forest_accent"
-        android:textSize="11sp"
-        android:textStyle="bold" />
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:background="@color/card_bg"
-        android:elevation="1dp"
-        android:orientation="vertical"
-        android:padding="14dp">
+        android:orientation="vertical">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="🚗 Leśny Parking (Główna Baza)"
+            android:layout_marginBottom="12dp"
+            android:text="Baza Miejsc i Sejf Lokalizacji"
             android:textColor="@color/text_main"
-            android:textSize="15sp"
+            android:textSize="20sp"
             android:textStyle="bold" />
 
+        <!-- punkty publiczne -->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="2dp"
-            android:text="Lat: 49.6214° N, Lon: 20.7042° E • 850m"
-            android:textColor="@color/text_muted"
-            android:textSize="12sp" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="16dp"
-        android:background="@color/card_bg"
-        android:elevation="1dp"
-        android:orientation="vertical"
-        android:padding="14dp">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="⛺ Obóz / Namiot w dolinie"
-            android:textColor="@color/text_main"
-            android:textSize="15sp"
+            android:layout_marginBottom="8dp"
+            android:text="PUNKTY PUBLICZNE"
+            android:textColor="@color/forest_accent"
+            android:textSize="11sp"
             android:textStyle="bold" />
 
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerPublicPoints"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:nestedScrollingEnabled="false" />
+
+        <!-- punkty prywatne -->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="2dp"
-            android:text="Lat: 49.6180° N, Lon: 20.7120° E • 1.4 km"
-            android:textColor="@color/text_muted"
-            android:textSize="12sp" />
-    </LinearLayout>
+            android:layout_marginBottom="8dp"
+            android:text="SEJF LOKALIZACJI (PUNKTY PRYWATNE)"
+            android:textColor="@color/forest_primary"
+            android:textSize="11sp"
+            android:textStyle="bold" />
 
-    <!-- punkty prywatne -->
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:text="SEJF LOKALIZACJI (WYMAGA AUTORYZACJI)"
-        android:textColor="@color/forest_primary"
-        android:textSize="11sp"
-        android:textStyle="bold" />
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/card_bg"
-        android:elevation="1dp"
-        android:orientation="horizontal"
-        android:padding="14dp">
-
-        <LinearLayout
-            android:layout_width="0dp"
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerPrivatePoints"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:orientation="vertical">
+            android:nestedScrollingEnabled="false" />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="🔒 Ukryty Skarb / Punkt Awaryjny"
-                android:textColor="@color/forest_primary"
-                android:textSize="15sp"
-                android:textStyle="bold" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="2dp"
-                android:text="Zabezpieczone czytnikiem linii papilarnych"
-                android:textColor="@color/text_muted"
-                android:textSize="12sp" />
-        </LinearLayout>
-
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="48dp"
-            android:backgroundTint="@color/forest_primary"
-            android:text="Odblokuj"
-            android:textSize="11sp" />
     </LinearLayout>
-</LinearLayout>
+</ScrollView>
