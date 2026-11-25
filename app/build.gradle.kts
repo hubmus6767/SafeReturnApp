@@ -44,7 +44,8 @@ dependencies {
     implementation(libs.androidx.navigation.ui.ktx)
     implementation(libs.googleid)
     implementation(libs.material)
-
+    implementation("com.google.android.gms:play-services-maps:18.2.0")
+    implementation("com.google.android.gms:play-services-location:21.1.0")
 
     implementation(platform("com.google.firebase:firebase-bom:32.8.0"))
     implementation("com.google.firebase:firebase-auth")
