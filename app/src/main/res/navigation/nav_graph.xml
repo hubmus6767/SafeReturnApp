@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/nav_graph"
@@ -7,15 +6,20 @@
     <fragment
         android:id="@+id/navigatorFragment"
         android:name="com.example.safereturn.NavigatorFragment"
-        android:label="Ekran Główny" />
+        android:label="Nawigator" />
 
     <fragment
         android:id="@+id/pointsListFragment"
         android:name="com.example.safereturn.PointsListFragment"
-        android:label="Lista Punktów" />
+        android:label="Baza Miejsc" />
 
     <fragment
         android:id="@+id/addPointFragment"
         android:name="com.example.safereturn.AddPointFragment"
         android:label="Dodaj Punkt" />
+
+    <fragment
+        android:id="@+id/accountFragment"
+        android:name="com.example.safereturn.AccountFragment"
+        android:label="Konto" />
 </navigation>
