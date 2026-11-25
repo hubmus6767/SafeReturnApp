@@ -6,14 +6,38 @@
     android:gravity="center"
     android:orientation="vertical"
     android:padding="24dp">
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="32dp"
+        android:layout_marginBottom="24dp"
         android:text="SafeReturn — Rejestracja"
         android:textColor="@color/forest_primary"
         android:textSize="22sp"
         android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/etFirstName"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginBottom="12dp"
+        android:background="@color/card_bg"
+        android:hint=" Imię"
+        android:paddingHorizontal="12dp"
+        android:textColor="@color/text_main"
+        android:textSize="14sp" />
+
+    <EditText
+        android:id="@+id/etLastName"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginBottom="12dp"
+        android:background="@color/card_bg"
+        android:hint=" Nazwisko"
+        android:paddingHorizontal="12dp"
+        android:textColor="@color/text_main"
+        android:textSize="14sp" />
+
     <EditText
         android:id="@+id/etEmail"
         android:layout_width="match_parent"
@@ -24,8 +48,8 @@
         android:inputType="textEmailAddress"
         android:paddingHorizontal="12dp"
         android:textColor="@color/text_main"
-        android:textColorHint="#666666"
         android:textSize="14sp" />
+
     <EditText
         android:id="@+id/etPassword"
         android:layout_width="match_parent"
@@ -36,14 +60,15 @@
         android:inputType="textPassword"
         android:paddingHorizontal="12dp"
         android:textColor="@color/text_main"
-        android:textColorHint="#666666"
         android:textSize="14sp" />
+
     <Button
         android:id="@+id/btnRegister"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:backgroundTint="@color/forest_primary"
-        android:text="ZAREJESTRUJ I DODAJ ODCISK PALCA"
+        android:text="ZAREJESTRUJ I DODAJ ODCISK"
         android:textColor="@android:color/white"
         android:textStyle="bold" />
+
 </LinearLayout>
